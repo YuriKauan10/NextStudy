@@ -11,18 +11,26 @@
 const nome = 'Yuri'
 const sobrenome = 'Kauan'
 
+const teste = {
+  display:'flex',
+  alignItens: 'center',
+  justifyContent: 'center',
+  color: '#00f',
+  backgroundColor: '#eee',
+  fontSize:'20px'
+}
 
 function Topo(){
   const idade = 18
-
+  
   return (
-    <div className = ' justify-between items-center bg-zinc-300 h-20'>
+    <div style = {teste}>
       <div className="flex flex-col justify-center items-center">
-      <h1>Meu nome é: </h1>
-      <div className="text-3xl">{nome + ' ' + sobrenome}</div>
+      <h1 style = {{color: '#f00',backgroundColor: '#bbb'}}>Meu nome é: </h1>
+      <div className="subtitulo">Programador</div>
       <div>{idade}</div> 
       </div>
-      <div className="subtitulo">Programador</div>
+      <div className="text-3xl">{nome + ' ' + sobrenome}</div>
     </div>
   )
 }
@@ -30,7 +38,9 @@ function Topo(){
 export default function Home() {
   return (
     <main>
+      <div>
         <Topo/>
+      </div>
       </main>
     )
 }
